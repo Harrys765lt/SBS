@@ -1,0 +1,309 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    /* Ocean Glass Palette - From Moodboard */
+    --color-charcoal: #1E1E1E;         /* Dark charcoal */
+    --color-blue: #3B82F6;             /* Bright blue */
+    --color-purple: #A855F7;           /* Vibrant purple */
+    --color-cream: #F5E6D3;            /* Warm cream/beige */
+    --color-coral: #FF9B82;            /* Coral/salmon */
+    
+    /* System Colors */
+    --color-primary: #1E1E1E;          /* Charcoal - Primary text/elements */
+    --color-secondary: #3B82F6;        /* Blue - Interactive elements */
+    --color-accent: #A855F7;           /* Purple - Accents */
+    --color-accent-whatsapp: #25D366;  /* WhatsApp Green */
+    --color-surface: #FFFFFF;          /* Pure White */
+    --color-surface-gray: #FAFAFA;     /* Very light gray */
+    --color-surface-elevated: #FFFFFF; /* White cards */
+    --color-text-primary: #1E1E1E;     /* Charcoal */
+    --color-text-secondary: #6B7280;   /* Gray */
+    --color-text-tertiary: #9CA3AF;    /* Light gray */
+    --color-text-on-dark: #FFFFFF;     /* White on dark */
+    --color-border: #E5E7EB;           /* Light border */
+    --color-border-light: #F3F4F6;     /* Very light border */
+    --color-error: #EF4444;            /* Red */
+    --color-success: #10B981;          /* Green */
+
+    /* Shadcn Variables */
+    --background: 0 0% 100%;
+    --foreground: 0 0% 12%;
+    --card: 0 0% 100%;
+    --card-foreground: 0 0% 12%;
+    --popover: 0 0% 100%;
+    --popover-foreground: 0 0% 12%;
+    --primary: 0 0% 12%;
+    --primary-foreground: 0 0% 100%;
+    --secondary: 217 91% 60%;
+    --secondary-foreground: 0 0% 100%;
+    --muted: 0 0% 98%;
+    --muted-foreground: 0 0% 42%;
+    --accent: 271 91% 65%;
+    --accent-foreground: 0 0% 100%;
+    --destructive: 0 84% 60%;
+    --destructive-foreground: 0 0% 100%;
+    --border: 0 0% 90%;
+    --input: 0 0% 90%;
+    --ring: 217 91% 60%;
+    --radius: 1rem;
+    --chart-1: 217 91% 60%;
+    --chart-2: 271 91% 65%;
+    --chart-3: 16 100% 76%;
+    --chart-4: 37 90% 85%;
+    --chart-5: 0 0% 42%;
+  }
+
+  * {
+    @apply border-[var(--color-border)];
+  }
+
+  body {
+    @apply bg-[var(--color-surface)] text-[var(--color-text-primary)];
+    font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+    font-weight: 400;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    letter-spacing: -0.01em;
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+    letter-spacing: -0.03em;
+    color: var(--color-text-primary);
+  }
+  
+  h1 {
+    font-weight: 900;
+    font-size: 4.5rem;
+    line-height: 1.05;
+  }
+  
+  h2 {
+    font-weight: 800;
+    font-size: 3rem;
+    line-height: 1.1;
+  }
+  
+  h3 {
+    font-weight: 700;
+    font-size: 2.25rem;
+    line-height: 1.2;
+  }
+  
+  h4 {
+    font-weight: 600;
+    font-size: 1.5rem;
+    line-height: 1.4;
+  }
+  
+  h5 {
+    font-weight: 600;
+    font-size: 1.25rem;
+    line-height: 1.5;
+  }
+  
+  h6 {
+    font-weight: 600;
+    font-size: 1rem;
+    line-height: 1.5;
+  }
+  
+  /* Mobile responsive typography */
+  @media (max-width: 768px) {
+    h1 {
+      font-size: 3rem;
+    }
+    
+    h2 {
+      font-size: 2.25rem;
+    }
+    
+    h3 {
+      font-size: 1.75rem;
+    }
+  }
+
+  h1 {
+    font-size: 3rem;
+    font-weight: 700;
+    line-height: 1.2;
+  }
+
+  h2 {
+    font-size: 2.25rem;
+    font-weight: 600;
+    line-height: 1.3;
+  }
+
+  h3 {
+    font-size: 1.875rem;
+    font-weight: 600;
+    line-height: 1.3;
+  }
+
+  h4 {
+    font-size: 1.5rem;
+    font-weight: 600;
+    line-height: 1.4;
+  }
+
+  h5 {
+    font-size: 1.25rem;
+    font-weight: 500;
+    line-height: 1.5;
+  }
+
+  h6 {
+    font-size: 1rem;
+    font-weight: 500;
+    line-height: 1.5;
+  }
+
+  p {
+    font-size: 1rem;
+    line-height: 1.625;
+  }
+
+  small {
+    font-size: 0.875rem;
+    line-height: 1.5;
+  }
+}
+
+@layer utilities {
+  /* Shadows - Moodboard Inspired */
+  .shadow-soft {
+    box-shadow: 0 1px 3px rgba(30, 30, 30, 0.05), 0 4px 12px rgba(30, 30, 30, 0.03);
+  }
+
+  .shadow-premium {
+    box-shadow: 0 4px 24px rgba(59, 130, 246, 0.12), 0 8px 40px rgba(168, 85, 247, 0.08);
+  }
+
+  .shadow-luxury {
+    box-shadow: 0 20px 60px rgba(59, 130, 246, 0.15), 0 12px 32px rgba(168, 85, 247, 0.1);
+  }
+
+  /* Gradients - From Moodboard */
+  .gradient-blue-purple {
+    background: linear-gradient(135deg, #3B82F6 0%, #A855F7 100%);
+  }
+
+  .gradient-purple-pink {
+    background: linear-gradient(135deg, #A855F7 0%, #EC4899 100%);
+  }
+
+  .gradient-orange-purple {
+    background: linear-gradient(135deg, #FF9B82 0%, #A855F7 100%);
+  }
+
+  .gradient-blue-cyan {
+    background: linear-gradient(135deg, #3B82F6 0%, #06B6D4 100%);
+  }
+
+  .gradient-mesh {
+    background: 
+      radial-gradient(at 27% 37%, hsla(215, 98%, 61%, 0.12) 0px, transparent 50%),
+      radial-gradient(at 97% 21%, hsla(271, 91%, 65%, 0.12) 0px, transparent 50%),
+      radial-gradient(at 52% 99%, hsla(16, 100%, 76%, 0.12) 0px, transparent 50%),
+      radial-gradient(at 10% 29%, hsla(189, 94%, 52%, 0.12) 0px, transparent 50%),
+      radial-gradient(at 97% 96%, hsla(271, 91%, 65%, 0.12) 0px, transparent 50%),
+      radial-gradient(at 33% 50%, hsla(215, 98%, 61%, 0.12) 0px, transparent 50%),
+      radial-gradient(at 79% 53%, hsla(37, 90%, 85%, 0.12) 0px, transparent 50%);
+  }
+
+  /* Text Gradients */
+  .text-gradient-blue {
+    background: linear-gradient(135deg, #3B82F6 0%, #A855F7 100%);
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+
+  .text-gradient-purple {
+    background: linear-gradient(135deg, #A855F7 0%, #EC4899 100%);
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+
+  .text-gradient-coral {
+    background: linear-gradient(135deg, #FF9B82 0%, #F472B6 100%);
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+
+  /* Glass Morphism - Moodboard Style */
+  .glass-effect {
+    background: rgba(255, 255, 255, 0.7);
+    backdrop-filter: blur(24px);
+    -webkit-backdrop-filter: blur(24px);
+    border: 1px solid rgba(255, 255, 255, 0.4);
+  }
+
+  .glass-card {
+    background: rgba(255, 255, 255, 0.5);
+    backdrop-filter: blur(20px);
+    -webkit-backdrop-filter: blur(20px);
+    border: 1px solid rgba(255, 255, 255, 0.6);
+  }
+
+  /* Hover Effects */
+  .hover-lift {
+    transition: transform 0.3s cubic-bezier(0.4, 0, 0.2, 1), 
+                box-shadow 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  }
+
+  .hover-lift:hover {
+    transform: translateY(-8px);
+  }
+
+  .hover-scale {
+    transition: transform 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  }
+
+  .hover-scale:hover {
+    transform: scale(1.02);
+  }
+
+  /* Fade In Animation */
+  @keyframes fade-in {
+    from {
+      opacity: 0;
+      transform: translateY(20px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+
+  .animate-fade-in {
+    animation: fade-in 0.8s ease-out forwards;
+    opacity: 0;
+  }
+
+  /* Smooth Scroll */
+  html {
+    scroll-behavior: smooth;
+  }
+
+  /* Premium Focus Styles */
+  *:focus-visible {
+    outline: 2px solid #3B82F6;
+    outline-offset: 2px;
+    border-radius: 0.5rem;
+  }
+
+  /* Selection Style */
+  ::selection {
+    background-color: rgba(168, 85, 247, 0.2);
+    color: inherit;
+  }
+}
