@@ -27,9 +27,9 @@ function normalizeResult(obj) {
 
 export async function parseMessageLLM(text) {
   const cli = getClient();
-  if (!cli) return null; // not configured
+  if (!cli) return null; 
 
-  const model = process.env.OPENAI_MODEL || "gpt-5-mini";
+  const model = process.env.OPENAI_MODEL || "gpt-4o-mini";
 
   const sys = `You are a salon booking NLU.
 Extract intent and entities from user text for a hair salon.

@@ -25,8 +25,8 @@ function copyDir(src, dest) {
 }
 
 const mappings = [
-  { from: path.join(root, 'frontend', 'Responsive Booking Marketplace', 'dist'), to: path.join(root, 'public', 'site') },
-  { from: path.join(root, 'frontend', 'Merchant Portal Design', 'dist'), to: path.join(root, 'public', 'portal') }
+  { from: path.join(root, 'frontend', 'marketplace', 'dist'), to: path.join(root, 'public', 'site') },
+  { from: path.join(root, 'frontend', 'merchant-portal', 'dist'), to: path.join(root, 'public', 'portal') }
 ];
 
 for (const m of mappings) {

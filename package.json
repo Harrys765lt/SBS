@@ -3,16 +3,16 @@
   "version": "1.0.0",
   "type": "module",
   "description": "",
-  "main": "index.js",
+  "main": "backend/server.js",
   "directories": {
     "test": "test"
   },
   "scripts": {
-    "dev": "nodemon index.js",
-    "start": "node index.js",
+    "dev": "nodemon backend/server.js",
+    "start": "node backend/server.js",
     "test": "vitest run",
-    "build:site": "npm --prefix \"frontend/Responsive Booking Marketplace\" run build",
-    "build:portal": "npm --prefix \"frontend/Merchant Portal Design\" run build",
+    "build:site": "npm --prefix \"frontend/marketplace\" run build",
+    "build:portal": "npm --prefix \"frontend/merchant-portal\" run build",
     "build:web": "npm run build:site && npm run build:portal && node scripts/copy-frontend-builds.js"
   },
   "workspaces": [
