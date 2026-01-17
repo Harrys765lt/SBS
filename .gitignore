@@ -6,3 +6,18 @@ node_modules
 *.db-wal
 .env
 .env.*
+
+# Python virtual environments
+.venv/
+venv/
+ENV/
+env/
+
+# Large model files
+*.safetensors
+*.pyd
+*.dll
+
+# ML model directories
+ml/classifiers/classifier_models/
+RAG/.venv/
