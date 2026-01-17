@@ -12,6 +12,8 @@ node_modules
 venv/
 ENV/
 env/
+**/.venv/
+data/training/**/.venv/
 
 # Large model files
 *.safetensors
@@ -21,3 +23,4 @@ env/
 # ML model directories
 ml/classifiers/classifier_models/
 RAG/.venv/
+data/training/data training/.venv/
